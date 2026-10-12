@@ -1,0 +1,48 @@
+{
+  "wall": {
+    "paths": ["artifacts/line-3/wall-v5.png", "artifacts/line-3/wall.png"],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "866c1cb1e9c0e62e3aba8b330109f8ba07ee94a141f84c31f9dc2581127ad403",
+    "bytes": 3961107
+  },
+  "thumbnail": {
+    "path": "dist/line-3/25.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 64095
+  },
+  "preservation": {
+    "inheritedSha256": "18bb3a6851b6102a078b3d87ed48cf863555679e1f6da4848037f15e8b189ef4",
+    "editRectangle": [255, 220, 135, 125],
+    "changedPixels": 16095,
+    "changedPixelsOutsideRectangle": 0
+  },
+  "tests": {
+    "newPassed": 8,
+    "inheritedPassed": 33,
+    "demoStatus": "matches-expectations"
+  },
+  "visualReview": {
+    "reviewed": true,
+    "pepe": "Inherited heavy-lidded eyes and wide mouth retained.",
+    "visibleHandDigits": [5, 5],
+    "newHandsOrStencils": 0,
+    "forbiddenVisualElementsFound": [],
+    "observation": "Two worn ochre standing stones and one yellow pebble appear left of the balance; cave rock, cracks, light and prior paintings remain. Local review only."
+  },
+  "unmetVisualRequirements": [],
+  "checks": {
+    "recordSchema": true,
+    "recordHash": true,
+    "continuingWallIdentical": true,
+    "oldRecordsAndGoalUnchanged": true,
+    "imageFormatsAndDimensions": true,
+    "changedPathsWithinScope": true,
+    "newNonArtifactFilesUnder100KB": true,
+    "requiredPngUntracked": true
+  }
+}
