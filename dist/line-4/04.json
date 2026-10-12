@@ -1,1 +1,12 @@
-{"name":"Not painted yet","image":"https://api.imd.fun/artifacts/9cbb7bb2a41efa92e010921f287819c9ffb02c4375fa9496c8468701d8e00cc5","attributes":[{"trait_type":"Cave","value":"Base"}]}
+{
+  "name": "Open Relay Passage",
+  "image": "https://api.imd.fun/artifacts/c6a3cb69d64a589b210f101efaad0b437b6b0e93125c6d4382ba5163cdfd9b29",
+  "attributes": [
+    {"trait_type": "Cave", "value": "Base"},
+    {"trait_type": "Wall", "value": "Line 4"},
+    {"trait_type": "Number", "value": 4},
+    {"trait_type": "Left behind", "value": "Relay-Compatible Transfer Window"},
+    {"trait_type": "Meaning", "value": "An ochre trail passes through an open charcoal arch as Pepe reads a public transfer window."},
+    {"trait_type": "One thing", "value": "Inspect a live ERC-20 transfer window"}
+  ]
+}

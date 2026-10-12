@@ -1,1 +1,30 @@
-{"name":"Not painted yet","image":"https://api.imd.fun/artifacts/9cbb7bb2a41efa92e010921f287819c9ffb02c4375fa9496c8468701d8e00cc5","attributes":[{"trait_type":"Cave","value":"Base"}]}
+{
+  "name": "Twin Witness Trails",
+  "image": "https://api.imd.fun/artifacts/aed2993fc42cc4805042362941eea403c04948f8aeeec21b4e60265e7460c338",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 3
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "ERC-20 Transfer Crosscheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two ochre trails share a chalk loop as Pepe checks one window with two witnesses."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Inspect a live ERC-20 transfer window"
+    }
+  ]
+}

@@ -1,1 +1,30 @@
-{"name":"Not painted yet","image":"https://api.imd.fun/artifacts/9cbb7bb2a41efa92e010921f287819c9ffb02c4375fa9496c8468701d8e00cc5","attributes":[{"trait_type":"Cave","value":"Base"}]}
+{
+  "name": "Pepe Sieves the Scroll",
+  "image": "https://api.imd.fun/artifacts/748489cb714346c7588b55a2754736d0f8a4fd0dda551290fa6ba4a87d5538ab",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 2
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "zto-eip1559-decoder"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe sieves flawed pebbles from sound ones before trusting a scroll."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline EIP-1559 transaction decoding"
+    }
+  ]
+}

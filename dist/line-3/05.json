@@ -1,1 +1,12 @@
-{"name":"Not painted yet","image":"https://api.imd.fun/artifacts/9cbb7bb2a41efa92e010921f287819c9ffb02c4375fa9496c8468701d8e00cc5","attributes":[{"trait_type":"Cave","value":"Base"}]}
+{
+  "name": "Pepe Tests the Stone Gate",
+  "image": "https://api.imd.fun/artifacts/866c1cb1e9c0e62e3aba8b330109f8ba07ee94a141f84c31f9dc2581127ad403",
+  "attributes": [
+    {"trait_type": "Cave", "value": "Base"},
+    {"trait_type": "Wall", "value": "Line 3"},
+    {"trait_type": "Number", "value": 5},
+    {"trait_type": "Left behind", "value": "unsigned-guard"},
+    {"trait_type": "Meaning", "value": "Pepe checks a pebble against a narrow gate before trusting its shape."},
+    {"trait_type": "One thing", "value": "Offline EIP-1559 transaction decoding"}
+  ]
+}
