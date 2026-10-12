@@ -1,0 +1,27 @@
+{
+  "round": 25,
+  "wall": {
+    "paths": ["artifacts/line-4/wall.png", "artifacts/line-4/wall-v5.png"],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "bytes": 3009744,
+    "sha256": "2badba4d2a594fdb90bc528e87122c305394985653a19b63a51df61ab836ff51"
+  },
+  "thumbnail": {
+    "path": "dist/line-4/25.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "mode": "RGB",
+    "bytes": 75837
+  },
+  "generator": "built-in image_gen edit",
+  "preservation": {
+    "ancestor_sha256": "c6a3cb69d64a589b210f101efaad0b437b6b0e93125c6d4382ba5163cdfd9b29",
+    "review": "The editor retained the composition, Pepe, ancestral marks, warm rock, cracks, torchlight, and framing while adding a lower-left charcoal path and two ochre stones. Its raster output changes fine texture globally, so pixel identity outside the added mark is not claimed."
+  },
+  "unmet_visual_requirements": [],
+  "review": "Inspected the full PNG and 512-pixel JPEG. Pepe remains a wide-mouthed, heavy-lidded cave frog with the two inherited visible five-digit hands; no new hands or handprints were added. No letters, numbers, captions, signatures, logos, watermarks, borders, frames, real people, political symbols, or hateful symbols were observed."
+}

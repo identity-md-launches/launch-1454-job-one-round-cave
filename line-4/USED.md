@@ -55,3 +55,14 @@
 - Recovered record 23's full painted wall from its public artifact URL after
   verifying the SHA-256, then used the built-in image editor for a small new
   cave mark. The final wall preserves ancestral pixels outside the new patch.
+
+## Round 25
+
+- Kept the goal and existing reader, then added the optional strict public
+  address flow summary to its already validated bounded ZTO/IMD transfer window.
+  It uses no additional RPC method or dependency and clearly labels its output
+  as a window summary rather than a balance.
+- Recovered record 24's content-addressed wall from the public artifact endpoint,
+  verified its SHA-256 against the record, and used the built-in image editor to
+  place a small charcoal path and two ochre stepping-stones on open lower-left
+  rock. No wallet, key, signing, transaction submission or dependency was used.

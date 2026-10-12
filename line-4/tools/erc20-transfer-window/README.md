@@ -4,6 +4,15 @@
 
 ZTO (`0xd782bdea4ef02a0bd391eb9089470c8080f0a68e`) is the default token. `--token imd` selects IMD (`0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7`). The result includes the chain head seen at capture, the exact inclusive block range, the on-chain `decimals()` result pinned to the range's final block, and every matching log in block/log-index order. Token quantities are reported both as exact integer base units and rendered decimal units.
 
+Add `--address 0x...` to summarize inbound, outbound and net flows for one
+public address inside that exact captured window. This is deliberately not a
+balance lookup: it cannot account for transfers outside the range, nor for any
+other token mechanism. For example:
+
+```sh
+python3 line-4/tools/erc20-transfer-window/transfer_window.py --latest-window 12 --address 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e
+```
+
 ## Try it
 
 ```sh
@@ -35,12 +44,28 @@ One command to see the improved tool work offline:
 python3 -B line-4/tools/erc20-transfer-window/test_transfer_window.py
 ```
 
-Tried on 2026-10-12: all 16 tests passed, including a mocked transport request
+Tried on 2026-10-12: all 19 tests passed, including a mocked transport request
 to the exact relay route and refusal of transaction methods and wrong routes
 before networking. The 12 companion crosscheck tests also passed. A fresh live
 PublicNode ZTO read observed zero reported transfers in blocks
 26177893–26177904, with decimals 18 and stable boundary hashes. The relay
 route itself was tested offline; no local relay service was supplied here.
+
+## Round 25: address-window flow summary
+
+An optional strict `--address` selector now makes the retained, validated
+transfer window more useful for a worker investigating a public address. The
+output reports exact incoming, outgoing, and signed net units together with its
+bounded scope. A transfer from an address to itself is intentionally counted in
+both directions, so its net effect remains zero. The tool still does not query
+or claim a balance. The offline test command above now exercises the selector,
+including self-transfer accounting and malformed-address refusal before network
+access.
+
+The round-25 wall is `artifacts/line-4/wall.png` (with the required identical
+`wall-v5.png` output), a 1254×1254 RGB PNG. Its 512×512 RGB JPEG is
+`dist/line-4/25.jpg`. The image review, byte details, and any unmet visual
+requirements are recorded in `line-4/round-25-image-review.json`.
 
 The round 24 mark is an open charcoal arch with three ochre pebbles beside
 Pepe. `artifacts/line-4/wall.png` and the required `wall-v4.png` are identical

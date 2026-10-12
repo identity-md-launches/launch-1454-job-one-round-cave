@@ -70,6 +70,27 @@ class TransferTests(unittest.TestCase):
         self.assertEqual(window.display_units(0, 255), '0')
         self.assertEqual(window.display_units(2**256 - 1, 0), str(2**256 - 1))
 
+    def test_address_summary_is_exact_and_self_transfer_is_both_directions(self):
+        first = window.decode_log(LOGS[0], 18, window.TOKENS['zto'], FIRST, LAST)
+        second = copy.deepcopy(first)
+        second['from'] = first['to']
+        second['to'] = first['to']
+        second['raw_value'] = '7'
+        summary = window.address_summary([first, second], first['to'], 18)
+        self.assertEqual(summary['incoming_transfer_count'], 2)
+        self.assertEqual(summary['outgoing_transfer_count'], 1)
+        self.assertEqual(summary['matching_transfer_count'], 2)
+        self.assertEqual(summary['received_raw'], str(int(first['raw_value']) + 7))
+        self.assertEqual(summary['sent_raw'], '7')
+        self.assertEqual(summary['net_raw'], first['raw_value'])
+
+    def test_address_argument_is_strict(self):
+        valid = '0xAbCd' + '0' * 36
+        self.assertEqual(window.address(valid), valid.lower())
+        for bad in ('0x' + '0' * 39, '0x' + 'g' * 40, 'alice', '', None):
+            with self.subTest(bad=bad), self.assertRaises(window.argparse.ArgumentTypeError):
+                window.address(bad)
+
     def test_decimal_and_hex_block_arguments(self):
         self.assertEqual(window.parse_block('010'), 10)
         self.assertEqual(window.parse_block('0x10'), 16)
@@ -82,7 +103,7 @@ class TransferTests(unittest.TestCase):
 
 
 class CaptureTests(unittest.TestCase):
-    def capture(self, chain='0x1', logs=None, changed=None, decimals=None, head=None):
+    def capture(self, chain='0x1', logs=None, changed=None, decimals=None, head=None, extra_args=None):
         calls = []
         seen = {}
         # Block numbers/hashes are taken from observed logs. These minimal header
@@ -106,17 +127,26 @@ class CaptureTests(unittest.TestCase):
 
         output = io.StringIO()
         with patch.object(window, 'rpc', fake_rpc), contextlib.redirect_stdout(output):
-            window.main(['--from-block', str(FIRST), '--to-block', str(LAST)])
+            window.main(['--from-block', str(FIRST), '--to-block', str(LAST)] + (extra_args or []))
         return json.loads(output.getvalue()), calls
 
     def test_capture_pins_decimals_and_retains_evidence(self):
         result, calls = self.capture()
         self.assertEqual(result['chain_id'], 1)
+        self.assertEqual(result['schema_version'], 3)
         self.assertEqual(result['raw_logs'], LOGS)
         self.assertEqual(result['transfer_count'], 2)
         self.assertEqual(result['decimals_block'], LAST)
         self.assertEqual([params[-1] for method, params in calls if method == 'eth_call'], [hex(LAST)])
         self.assertEqual(sum(method == 'eth_getBlockByNumber' for method, _ in calls), 4)
+
+    def test_capture_optionally_emits_only_a_bounded_address_summary(self):
+        selected = '0x' + LOGS[0]['topics'][2][-40:]
+        result, _ = self.capture(extra_args=['--address', selected.upper().replace('0X', '0x')])
+        summary = result['address_window_summary']
+        self.assertEqual(summary['address'], selected)
+        self.assertEqual(summary['matching_transfer_count'], 1)
+        self.assertIn('not a token balance', summary['scope'])
 
     def test_empty_result_is_success_but_invalid_or_wrong_chain_is_error(self):
         result, _ = self.capture(logs=[])
