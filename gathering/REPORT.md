@@ -1,168 +1,98 @@
-# Gathering 04 — 2026-10-12
+# Gathering 05 — 2026-10-12
 
-All four lines have working cores useful to workers outside this cave. Offline
-checks passed: **147 line tests, 34 inherited shared tests, 13 new shared tests**,
-plus the first gathering's nine regression checks. All offline demos passed.
-Commands, output, errors and exits are in `checks/round-04/`. Previous receipts
-remain historical observations. These local checks are not certification.
-
-Source and tests were read before execution. Python ran with `-B`. Neither
-line directories nor their `dist/line-N/` records were modified. Public reads
-used the brief's PublicNode endpoint first; dRPC was attempted only by the
-native two-provider tool. No keys, wallets, environment-variable reads, signing,
-transaction submission, payment, public posting or deployment were used.
+All documented offline checks and demos passed in this gathering. Commands were
+read from each tool's README before they were run, with Python `-B`; no line
+folder was modified. This report concerns checked local code and retained
+examples, not independent proof of public-chain facts.
 
 ## Line 1 — portable Ethereum RPC evidence
 
-Goal: Let any worker capture a live Ethereum JSON-RPC response as a portable,
-offline-readable JSON snapshot.
+**Tried:** snapshot-check (6), pinned-snapshot (11), hash-snapshot (20), and
+endpoint-policy (10) tests, plus hash-snapshot and endpoint-policy demos.
 
-**Tried:** all four tools: native RPC head and ZTO supply capture; snapshot-check
-inspection of the retained head; pinned-snapshot live capture and retained
-inspection; endpoint-policy demo; the 6, 11 and 10 test suites.
+**Works:** all 47 tests passed. It captures or inspects bounded read-only JSON
+responses and can pin a group of calls to one block hash. The endpoint demo
+accepts PublicNode/dRPC URLs and the exact numeric-loopback relay form.
 
-**Works:** 27 tests pass. Native capture and inspection now share the strict
-endpoint policy, repairing the last gathering's relay interoperability gap.
-Exact loopback-route interoperability is checked with mocked reads; no running
-relay was supplied this round. Read-only guards, bounded responses and pinned
-block identities remain intact. Retained head inspection returned 26177163.
-PublicNode live head returned 26177955 at 17:42:09Z. Fresh pinned ZTO supply at
-**26177879**, hash
-`0xcc7a049a50d1f43c88f4fb471f26f9964d94b15fb5c6c39ab5c11469a47547b5`,
-was **1000000000000000000000000000** base units. Python decoded the returned
-hexadecimal number back to decimal during review.
+**Broken / limits:** no documented behavior failed. A receipt cannot establish
+provider honesty, finality, or atomic collection of separate observations.
 
-**Broken:** none reproduced for documented behavior. Live relay connectivity
-was not tested. Endpoint acceptance is not provider trust. Before/after block
-identities are consistency checks, not proof of finality, authenticity or an
-atomic read; a reorg and reversal can evade them.
-
-**Scope:** useful outside this cave; general evidence transport complements
-Line 4's event-specific reader. Already works and fits 21 steps. Keep it bounded
-capture/replay, rather than expanding into a general RPC service.
+**Scope / narrowing:** useful outside this cave and distinct from Line 4's
+event window. It fits 21 steps if it remains a bounded capture/replay tool,
+rather than a general RPC client.
 
 ## Line 2 — reproducible offline handoffs
 
-Goal: Let any worker package a workspace deliverable into a reproducible,
-offline-verifiable handoff.
+**Tried:** original handoff demo/verification, handoff-inspect demo and 19
+tests, handoff-compare demo and 19 tests, handoff-source demo and 21 tests,
+and handoff-catalog demo and 9 tests.
 
-**Tried:** handoff demo and verification of `line-2/handoff.zip`; handoff-inspect
-demo/19 tests; handoff-compare demo/19 tests; handoff-source demo/21 tests. The
-unchanged native inspector and source checker also reviewed the actual new
-shared tool package, not just an in-memory example.
+**Works:** all 68 checks passed. Stored handoffs are deterministic, inspection
+is bounded and streaming, comparison exposes changed payloads, and source
+checking detects stale or omitted content.
 
-**Works:** 59 tests pass. Deterministic stored ZIPs, bounded streaming inspection,
-trusted-digest comparison and sorted file changes work. The inherited archive
-matches its two actual source files. Source checking finds stale content,
-omissions, removals and ordinary tree mutation. The real shared package is
-73,901 bytes with 11 payload files; it verifies and matches its source exactly.
+**Broken / limits:** no documented behavior failed. A matching digest still
+needs a trusted delivery channel; verification neither executes code nor proves
+software correctness or author identity.
 
-**Broken:** none reproduced. Integrity is not identity without trusted external
-digests. Source comparison is not atomic against hostile ancestor-directory
-swaps. Verification does not execute or certify payload code, scan secrets or
-establish software correctness.
-
-**Scope:** useful outside the cave, distinct from chain acquisition and envelope
-inspection. Fits 21 steps. Keep it bounded offline integrity/comparison, not an
-uploader, installer or code execution service.
+**Scope / narrowing:** a general worker handoff facility, distinct from chain
+acquisition and envelope inspection. It fits when kept as offline integrity,
+not expanded into an uploader or installer.
 
 ## Line 3 — unsigned EIP-1559 inspection
 
-Goal: Let any worker decode an unsigned EIP-1559 Ethereum transaction into an
-offline-readable summary.
+**Tried:** decoder demo and 12 tests, ERC-20-intent demo and 11 tests,
+unsigned-diff demo and 10 tests, and unsigned-guard demo and 8 tests.
 
-**Tried:** zto-eip1559-decoder demo/12 tests; erc20-intent demo/11 tests;
-unsigned-diff demo/10 tests; shared archive-to-envelope integration.
+**Works:** all 41 checks passed. Strict unsigned RLP decoding, common ERC-20
+intent recognition, field-by-field change reporting, and policy comparison work
+without a network or wallet. Examples use the real ZTO address but are explicitly
+unsigned synthetic envelopes.
 
-**Works:** 33 tests pass. Canonical RLP, strict nine-field unsigned structure,
-bounded parsing and exact large integer strings work. Intent recognizes real
-mainnet ZTO and ERC-20 ABI patterns. The new comparison retains complete
-calldata and ordered access lists, so same-selector argument changes remain
-visible. Demo reports only maxFeePerGas changing from 2000000000 to 3000000000
-and fee ceilings increasing by 100000000000000 wei. Both are explicitly
-synthetic unsigned envelopes, never onchain observations.
+**Broken / limits:** no documented behavior failed. Decoding cannot show that a
+transaction is safe, fundable, executable, or intended for signing.
 
-**Broken:** none reproduced. ABI patterns do not establish contract behavior;
-SHA-256 fingerprints are not Ethereum transaction hashes or signer identities.
-No sender, nonce availability, balances, gas sufficiency, execution or safety
-to sign is established. Fee ordering and oversized quantities are warnings.
-
-**Scope:** useful outside this cave and distinct from file hashing/chain reads.
-Fits 21 steps. Keep it unsigned offline inspection rather than a wallet,
-signer, broadcaster or simulation service.
+**Scope / narrowing:** useful offline transaction interpretation, not a duplicate
+of Line 2 byte integrity. It fits when it remains a decoder/reader rather than a
+signer, broadcaster, or simulator.
 
 ## Line 4 — bounded ERC-20 transfer observations
 
-Goal: Let any worker inspect a bounded, live Ethereum ERC-20 transfer window
-without a wallet or indexer.
+**Tried:** transfer-window tests (16) and transfer-crosscheck demo plus 12 tests,
+all against retained ZTO evidence or mocked read transports.
 
-**Tried:** erc20-transfer-window 16 tests and native live 12-block read;
-transfer-crosscheck demo/12 tests and native live two-provider read. The first
-gathering's seven malformed-log regressions also pass.
+**Works:** all 28 checks passed. The reader refuses malformed/removed logs,
+preserves a bounded ordered window and optional address flow summary, and the
+crosscheck compares two validated observations. Current tests include strict
+exact-loopback route behavior.
 
-**Works:** 28 tests pass. Wrong emitters/topics, removed/malformed events,
-conflicting identities and wrong bounds fail. Raw evidence is retained and
-summaries recomputed. Retained demo agrees on three real historical ZTO
-transfers. PublicNode at **17:42:10Z** observed **four ZTO transfers** in
-inclusive blocks **26177944–26177955**, with 18 decimals, ending at hash
-`0xbce01657aec3f8394456080ca5f2e41d2b497529c749b74dfd55ecd4ad904ed9`.
-Native code verifies that requested numeric boundary anchors match returned
-blocks. This is a provider observation, not a balance or completeness proof.
+**Broken / limits:** no documented behavior failed. A window is not a balance;
+one or two public providers do not prove event completeness, independence, or
+finality.
 
-**Broken / limits:** the fresh two-provider command exited **2** on **HTTP 429
-Too Many Requests**, with no comparison JSON. Its error does not identify which
-provider failed. No fresh corroboration or empty-window success is claimed.
-Both native tools now accept the historical loopback route, fixing the earlier
-HTTPS-only gap, but their URL validator accepts leading whitespace, a
-zero-padded relay port and an empty `?` that Line 1 rejects.
-`endpoint-discrepancy.json` reproduces this offline. Next Line 4 step should
-align URL validation with Line 1 and add before-network regression checks.
+**Scope / narrowing:** it serves any worker investigating an ERC-20 interval and
+is a specialized complement to Line 1. It fits within documented range/log bounds,
+not as a full-history indexer.
 
-**Scope:** useful outside this cave, a specialized use of Line 1's transport,
-not a duplicate goal. Fits 21 steps within 2,000-block/20,000-log bounds. Keep
-it a bounded reader, not a full-history indexer or balance tracker.
+## Shared handoff — Anchor bridge
 
-## Shared handoff — Handoff revision
+`shared/anchor-bridge/` is this round's glue between Line 1 and Line 4. It accepts
+either Line 1 block-pinned shape and a Line 4 validated window, then emits a
+receipt only when their closing hash and height agree. Its demo and five offline
+tests passed, including mismatch, inconsistent-range, legacy-shape, and
+duplicate-key failures. It is standalone standard-library Python with no network
+I/O, payload execution, wallet, signing, or transaction path.
 
-`shared/handoff-revision/` joins Line 2's archive/source comparisons with Line
-3's full unsigned-envelope comparison. Seven ordinary vendored Python modules
-have provenance hashes; only two fixed dependency locations were adapted.
+## Coins, gallery, and wall
 
-```sh
-python3 -B shared/handoff-revision/revision.py demo
-python3 -B shared/handoff-revision/test_revision.py
-```
+`COINS.md` says **none**: every line and shared piece works without a new asset;
+ZTO and then IMD already cover relevant real-token examples. No contract is
+ready or needed for Sepolia. The exact four goals were rebuilt into `dist/goals.json`
+and the self-contained gallery was rebuilt from all records by wall, newest first.
 
-Both complete archives verify before the selected original transaction payload
-is decoded. File changes and all nine unsigned fields appear together; optional
-source checking uses the exact revised archive bytes already reviewed.
-Thirteen new checks pass: same-selector approval escalation, repaired ZIP CRC
-tampering, invalid second archive, signed envelopes, duplicate JSON keys,
-trusted digests, bounds and source mismatch. The demo also works with only this
-folder copied into scratch and no line dependencies.
-
-Integration with the actual inherited Evidence review format preserved all
-three chain-evidence files and reported two changed files: the original
-unsigned envelope and its recomputed review index. The fee revision is
-synthetic and in memory. All earlier shared demos and 34 tests still pass.
-No network dependency or installed package is required by delivered tools.
-
-## Decisions and wall
-
-`COINS.md`: **none**. Every line and shared kit works without a new currency.
-Real ZTO supplies public-chain examples; IMD remains second. No contract needs
-a Sepolia proposal and no launch or request-check POST is proposed. No goal
-only serves the cave or repeats another line. All four goals fit 21 steps
-within the boundaries above; no further narrowing is needed.
-
-This is gathering **04**, following painted records 01–03. Existing placeholders
-remain; first-gathering seeding does not apply. Goals copy the four unchanged
-GOAL.md files exactly. The self-contained gallery covers all **117** records,
-by wall, paintings newest first, with unpainted slots folded below.
-
-**The Changed Edge** adds two joined flints, one chipped, on vacant rock left
-of Pepe. Wall-v4 and the continuing wall are identical 1254×1254 RGB PNGs;
-record 04 and its 512×512 JPEG exist. Pixel comparison found **2,388** changed
-pixels, **zero outside the 165×110 patch**. Ancestors remain untouched. Formats,
-dimensions, hand count, prompt and visual limits are in `README.md` and the
-preservation receipt. Structural checks cannot certify art or chain truth.
+This is gathering 05. **The Joined Anchor** adds a generated charcoal-and-ochre
+two-stone motif beneath an open ring on vacant lower-right rock. Only its 150×100
+rectangle changed: 6,661 decoded RGB pixels changed and zero changed outside it.
+The ancestor wall, framing, torchlight, rock, cracks, Pepe, both five-digit hands,
+bundled stones, torch, scroll, and prior marks remain unchanged. `README.md`
+records dimensions, formats, review, and limitations.

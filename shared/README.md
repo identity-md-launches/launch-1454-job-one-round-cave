@@ -44,3 +44,21 @@ The folder is portable and uses only the Python standard library.
 ```sh
 python3 -B shared/handoff-revision/revision.py demo
 ```
+
+[`anchor-bridge/`](anchor-bridge/README.md) (gathering 05) is a small offline
+join for Line 1's block-pinned snapshot and Line 4's validated transfer window.
+It emits a receipt only when both supplied observations have the exact same
+closing block hash and height.
+
+```sh
+python3 -B shared/anchor-bridge/anchor_bridge.py demo
+```
+
+[`anchor-bridge/`](anchor-bridge/README.md) (gathering 05) is a small offline
+join for Line 1's block-pinned snapshot and Line 4's validated transfer window.
+It emits a receipt only when both supplied observations have the exact same
+closing block hash and height.
+
+```sh
+python3 -B shared/anchor-bridge/anchor_bridge.py demo
+```

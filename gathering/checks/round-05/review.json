@@ -1,0 +1,28 @@
+{
+  "wall": {
+    "path": "artifacts/gathering/wall-v5.png",
+    "sha256": "597a2c6ad549207042251f69b5a1ad30ec4e66fda24738311c758f46476a902d",
+    "dimensions": [1254, 1254],
+    "format": "8-bit RGB PNG",
+    "continuing_wall_byte_identical": true
+  },
+  "thumbnail": {
+    "path": "dist/gathering/05.jpg",
+    "dimensions": [512, 512],
+    "format": "baseline 8-bit three-component JPEG",
+    "bytes": 67800
+  },
+  "preservation": {
+    "ancestor_sha256": "23821808be606f6f8ea922f2e1457be6d8af17050aec08d9088b98113ec027d6",
+    "changed_rectangle": {"x": 900, "y": 790, "width": 150, "height": 100},
+    "changed_pixels": 6661,
+    "changed_pixels_outside_rectangle": 0
+  },
+  "manual_visual_review": {
+    "pepe_cave_figure_present": true,
+    "visible_hands": "two inherited hands, each four fingers plus one thumb",
+    "forbidden_text_or_symbols_observed": false,
+    "unmet_visual_requirements": "none identified",
+    "limitation": "Local visual review is not an independent artistic certification."
+  }
+}

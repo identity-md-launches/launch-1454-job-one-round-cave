@@ -77,3 +77,34 @@ placeholders were preserved rather than reseeded. The final named PNG output
 remains untracked for the daemon's upload. The structural checker validates
 formats, hashes, gallery order, size limits, current provenance and unchanged
 line files. It does not certify behavior, provider truth or visual quality.
+
+## The Joined Anchor — Gathering 05
+
+`shared/anchor-bridge/` is the new portable standard-library glue: it links a
+Line 1 block-pinned snapshot to a Line 4 validated transfer window only when
+both close at exactly the same block hash and height. Its demo and five offline
+tests passed. The full line audit is in `REPORT.md`; `COINS.md` records **none**.
+
+- `artifacts/gathering/wall-v5.png` and `artifacts/gathering/wall.png` are
+  byte-identical, **1254×1254**, 8-bit RGB PNG files.
+- `dist/gathering/05.jpg` is a **512×512**, baseline, three-component JPEG,
+  67,800 bytes.
+- `dist/gathering/05.json` has the required six traits and actual SHA-256 image
+  URL. `dist/goals.json` and `dist/index.html` were rebuilt locally.
+
+The built-in image generator made one white-backed pigment insert of two
+unlettered stones joined beneath an open ring with a small red-ochre wedge.
+`compose_mark_v5.py` removed its white background in memory and applied only
+pigment within `(900,790)`, 150×100, on recovered record-04 stone. The decoded
+comparison found 6,661 changed pixels and **zero** changes outside that rectangle.
+`make_thumbnail_v5.py` encoded the JPEG from final wall bytes only.
+
+Manual review of final PNG and JPEG found inherited Pepe still has the wide mouth
+and heavy-lidded eyes, with two visible hands of four fingers plus one thumb each;
+the new motif adds no hand or handprint. Warm rough rock, framing, cracks,
+torchlight and prior pigment marks remain. No letters, numbers, captions,
+signatures, logos, watermarks, borders, frames, real people, political/hateful
+symbols, photographs, or 3D rendering were found. **Unmet visual requirements:
+none identified in this local review.** This review is not an independent artistic
+certification; generated pigment inside the declared patch is approximate and the
+small mark can soften in the JPEG.

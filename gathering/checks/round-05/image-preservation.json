@@ -1,0 +1,18 @@
+{
+  "source_sha256": "23821808be606f6f8ea922f2e1457be6d8af17050aec08d9088b98113ec027d6",
+  "wall_sha256": "597a2c6ad549207042251f69b5a1ad30ec4e66fda24738311c758f46476a902d",
+  "rectangle": {
+    "x": 900,
+    "y": 790,
+    "width": 150,
+    "height": 100
+  },
+  "changed_pixels": 6661,
+  "changed_pixels_outside_rectangle": 0,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "8-bit RGB PNG",
+  "method": "Generated pigment was composited only within the declared vacant-rock rectangle."
+}

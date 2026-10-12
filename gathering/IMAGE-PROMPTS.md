@@ -56,3 +56,24 @@ replaced by the complete composited wall. No CLI/API fallback or key was used.
 Final prompt:
 
 > A single pigment insert for a prehistoric cave wall: two simple uneven flat flint stones side by side, left rounded flint whole, right flint with one visible chipped notch on its outer right edge, a tiny chipped fragment resting below right stone. A short loose cord joins the stones below. Spare handmade burnt-stick charcoal outlines, slightly worn, no shading, no perspective, no realistic stones. Only charcoal black on pure white background. Motif centered and occupies middle half of square canvas with broad white margins. Lascaux cave painting aesthetic. This mark symbolizes comparing two carried pieces before trusting a change, and will be composited as pigment onto vacant warm rock while preserving all ancestral paintings. No text, letters, numbers, captions, signatures, logos, watermarks, borders, frames, people, frogs, animals, hands or handprints.
+
+## Gathering 05 — The Joined Anchor
+
+Mode: built-in `image_gen.imagegen`, one new pigment insert; no CLI, API key,
+wallet, transaction, or external post.
+
+Final prompt:
+
+> One small isolated prehistoric symbol: two irregular rounded river stones
+> joined by a single short crooked charcoal line, with a small open charcoal
+> circle centered above the join and a tiny red-ochre wedge beside the right
+> stone. White background with broad margins for transfer to a warm cave wall.
+> Flat Lascaux/Chauvet hand-painted charcoal and red ochre, uneven burnt-stick
+> outlines, no shading or perspective. No characters, frog, hands, handprints,
+> letters, numbers, captions, signatures, logos, watermarks, borders, frames,
+> people, political or hateful symbols.
+
+The recovered record-04 wall is the retained ancestor. Only generated pigment
+within `(900,790)` through `(1050,890)` was blended onto original stone; decoded
+pixels outside that rectangle remain unchanged. The white generation backing was
+never retained in the final wall.

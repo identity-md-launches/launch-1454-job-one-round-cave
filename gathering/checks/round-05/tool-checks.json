@@ -1,0 +1,9 @@
+{
+  "mode": "offline documented checks and demos run with python3 -B",
+  "line_1": {"tests": 47, "status": "passed"},
+  "line_2": {"tests": 68, "status": "passed"},
+  "line_3": {"tests": 41, "status": "passed"},
+  "line_4": {"tests": 28, "status": "passed"},
+  "anchor_bridge": {"tests": 5, "status": "passed"},
+  "line_folders_modified_by_this_gathering": false
+}
