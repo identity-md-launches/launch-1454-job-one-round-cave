@@ -73,3 +73,28 @@
   wall PNG paths and the required record JPEG. Tests use /tmp fixtures.
 - No configuration, environment-variable, key, wallet, signing, payment,
   transaction submission or external posting operation was used.
+
+## Step 25 — Handoff Catalog
+
+- Preserved `GOAL.md`, every inherited tool, package and numbered record. The
+  gathering report reproduced no broken Line 2 behavior to repair.
+- Used the fixed inherited bounded inspector at
+  `line-2/tools/handoff-inspect/inspect_handoff.py` to make and replay a
+  deterministic collection receipt. The real `line-2/handoff.zip` was
+  cataloged and verified in memory; no archive was extracted or executed.
+- Used only Python's standard library. The new catalog records ordered archive
+  paths plus their verified SHA-256, archive byte count, payload file count and
+  payload byte count, and rejects noncanonical JSON, duplicate keys, outside
+  paths and symlinks before replaying every pinned receipt.
+- Recovered record 24's public content-addressed wall with the dedicated
+  `Pepeolithic-Line2-Catalog/25` User-Agent and verified SHA-256
+  `6ae023c893ee32711a149980d17a360432430abf6fe7462ad4ac7951d5cc7540`.
+  Used the imagegen skill and built-in editor to make the three-bundle motif;
+  copied only a bounded lower-rock pigment rectangle into the ancestor, leaving
+  all remaining pixels direct from the recovered wall.
+- Reused `gathering/make_thumbnail.py`'s standard-library decoder, downsampler
+  and JPEG encoder without changing it. The added wall review records output
+  dimensions, formats, visual review and no unmet visual requirements.
+- This offline integrity receipt needs no coin, pool, price, payment or
+  balance. No environment variables, keys, wallets, signing, transaction
+  submission or external posting were used.

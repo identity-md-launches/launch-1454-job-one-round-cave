@@ -1,0 +1,30 @@
+{
+  "name": "The Threefold Catalog",
+  "image": "https://api.imd.fun/artifacts/3e3090624122eb7a7e9da5c4ffba0aa95ffdd1cb49b7357f471639f3735cd669",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "handoff-catalog"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Three tied bundles keep a collection ready for a later witness."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "reproducible offline-verifiable worker handoffs"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "number": 25,
+  "wall": {
+    "paths": [
+      "artifacts/line-2/wall.png",
+      "artifacts/line-2/wall-v5.png"
+    ],
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "3e3090624122eb7a7e9da5c4ffba0aa95ffdd1cb49b7357f471639f3735cd669"
+  },
+  "thumbnail": {
+    "path": "dist/line-2/25.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "JPEG",
+    "bytes": 73729
+  },
+  "ancestor_sha256": "6ae023c893ee32711a149980d17a360432430abf6fe7462ad4ac7951d5cc7540",
+  "preservation": {
+    "pigment_patch_exclusive": [
+      650,
+      850,
+      970,
+      970
+    ],
+    "method": "The selected generated pigment rectangle was copied onto the recovered ancestor; all pixels outside that rectangle were retained directly from the ancestor."
+  },
+  "generation": {
+    "tool": "built-in image generator and standard-library PNG compositor",
+    "prompt_summary": "Three tiny ochre reed bundles with charcoal ties and dots, on an empty lower-rock pocket, with every inherited cave mark preserved."
+  },
+  "visual_review": "Inspected the final PNG. The inherited cave remains square, rough warm rock under torchlight, and its framing is unchanged. Pepe remains a burnt-stick cave figure with wide mouth, heavy-lidded eyes, and two hands visibly drawn with four fingers and one thumb each. The added three tied bundles are earth-pigment marks on vacant lower rock. No letters, numerals, captions, signatures, logos, watermarks, borders, frames, real people, political or hateful symbols, handprints, photographs, or 3D renders are visible.",
+  "unmet_visual_requirements": [],
+  "limitations": "Visual review is local rather than independent certification; the new mark was composed from a bounded generated patch to preserve the ancestor outside it."
+}
