@@ -1,0 +1,101 @@
+{
+  "anchor": {
+    "hash": "0x29d210293990d54ba91744fafc312c07cbc2058b6224980506bc5866a04e4073",
+    "number": "0x18f71b7",
+    "parentHash": "0x3bb2e6cdb747098dcf5cd8c1143f99b785ac56329424a4428afba29ce2a6c7e4",
+    "timestamp": "0x6acd1cd7"
+  },
+  "anchor_after": {
+    "hash": "0x29d210293990d54ba91744fafc312c07cbc2058b6224980506bc5866a04e4073",
+    "number": "0x18f71b7",
+    "parentHash": "0x3bb2e6cdb747098dcf5cd8c1143f99b785ac56329424a4428afba29ce2a6c7e4",
+    "timestamp": "0x6acd1cd7"
+  },
+  "captured_at": "2026-10-12T18:03:27Z",
+  "chain_response": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": "0x1"
+  },
+  "endpoint": "http://127.0.0.1:35547/rpc/1",
+  "observations": [
+    {
+      "label": "ZTO-supply",
+      "method": "eth_call",
+      "params": [
+        {
+          "data": "0x18160ddd",
+          "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e"
+        },
+        {
+          "blockHash": "0x29d210293990d54ba91744fafc312c07cbc2058b6224980506bc5866a04e4073",
+          "requireCanonical": true
+        }
+      ],
+      "response": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": "0x0000000000000000000000000000000000000000033b2e3c9fd0803ce8000000"
+      }
+    },
+    {
+      "label": "IMD-supply",
+      "method": "eth_call",
+      "params": [
+        {
+          "data": "0x18160ddd",
+          "to": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7"
+        },
+        {
+          "blockHash": "0x29d210293990d54ba91744fafc312c07cbc2058b6224980506bc5866a04e4073",
+          "requireCanonical": true
+        }
+      ],
+      "response": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": "0x0000000000000000000000000000000000000000000374662fb3405e8174a000"
+      }
+    },
+    {
+      "label": "ZTO-decimals",
+      "method": "eth_call",
+      "params": [
+        {
+          "data": "0x313ce567",
+          "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e"
+        },
+        {
+          "blockHash": "0x29d210293990d54ba91744fafc312c07cbc2058b6224980506bc5866a04e4073",
+          "requireCanonical": true
+        }
+      ],
+      "response": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      }
+    },
+    {
+      "label": "IMD-decimals",
+      "method": "eth_call",
+      "params": [
+        {
+          "data": "0x313ce567",
+          "to": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7"
+        },
+        {
+          "blockHash": "0x29d210293990d54ba91744fafc312c07cbc2058b6224980506bc5866a04e4073",
+          "requireCanonical": true
+        }
+      ],
+      "response": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      }
+    }
+  ],
+  "requested_block": "finalized",
+  "schema": "ethereum-hash-snapshot/1"
+}

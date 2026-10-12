@@ -1,0 +1,11 @@
+{
+  "record_schema": "passed",
+  "record_count": 25,
+  "old_records_and_goal_byte_identical": true,
+  "modified_paths_in_scope": true,
+  "new_source_files_under_100000_bytes": true,
+  "named_png_untracked": true,
+  "continuing_wall_byte_identical": true,
+  "portable_two_folder_offline_demo": "passed",
+  "network_used_for_portable_demo": false
+}

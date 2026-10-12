@@ -1,0 +1,30 @@
+{
+  "name": "The Shared Anchor",
+  "image": "https://api.imd.fun/artifacts/8949df4040286bf066690e7731990664cda87117d938206646902192ba28df1b",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "hash-snapshot"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Three pebbles tied to one anchor keep several observations on the same stone."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "portable live Ethereum state snapshots"
+    }
+  ]
+}

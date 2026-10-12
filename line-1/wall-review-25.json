@@ -1,0 +1,51 @@
+{
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "color": "8-bit RGB",
+  "bytes": 3848179,
+  "sha256": "8949df4040286bf066690e7731990664cda87117d938206646902192ba28df1b",
+  "patch": [
+    335,
+    845,
+    156,
+    131
+  ],
+  "changed_pixels": 6855,
+  "changed_pixels_outside_patch": 0,
+  "inherited_wall_sha256": "648fd12358681ec811c8eb2a707f4399fa5dc46631f7c2ea4a0785ecb7cd5179",
+  "thumbnail": {
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "JPEG",
+    "bytes": 38179
+  },
+  "round": 25,
+  "wall_paths": [
+    "artifacts/line-1/wall-v5.png",
+    "artifacts/line-1/wall.png"
+  ],
+  "visual_review": {
+    "pepe_preserved": true,
+    "digits_per_inherited_hand": 5,
+    "new_hands": 0,
+    "ancestor_marks_preserved": true,
+    "text_added": false,
+    "unmet_requirements": [],
+    "limits": "Manual visual review is subjective. Inherited photographic-looking rock was preserved."
+  },
+  "checks": {
+    "new_offline_tests": 20,
+    "ancestor_tests": 27,
+    "live_worker_relay_capture": "passed",
+    "offline_demo": "passed",
+    "wall_png_structure": "valid",
+    "thumbnail_jpeg_structure": "valid",
+    "local_results_are_not_independent_certification": true
+  },
+  "method": "Installed imagegen edit; ffmpeg dark-pigment isolation into vacant patch; original pixels restored outside patch; ffmpeg JPEG conversion"
+}
